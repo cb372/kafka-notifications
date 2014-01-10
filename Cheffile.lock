@@ -1,0 +1,23 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    aws (1.0.0)
+    chef_handler (1.1.4)
+    java (1.17.4)
+      aws (>= 0.0.0)
+      windows (>= 0.0.0)
+    windows (1.12.6)
+      chef_handler (>= 0.0.0)
+
+GIT
+  remote: https://github.com/minettiandrea/play2
+  ref: master
+  sha: 1f0cf6ac3c8a45042fe42c8c38206a2a304c0d3a
+  specs:
+    play2 (0.1.0)
+      java (>= 0.0.0)
+
+DEPENDENCIES
+  java (>= 0)
+  play2 (>= 0)
+
