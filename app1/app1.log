@@ -1,7 +1,0 @@
-Waiting for lock on /srv/play-2.2.1/framework/sbt/boot/sbt.boot.lock to be available...
-[0m[[0minfo[0m] [0mLoading project definition from /vagrant/app1/project[0m
-[0m[[0minfo[0m] [0mSet current project to app1 (in build file:/vagrant/app1/)[0m
-[32m
-(Starting server. Type Ctrl+D to exit logs, the server will remain in background)
-[0m
-

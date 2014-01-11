@@ -1,7 +1,15 @@
-@(message: String)
+@(messageForm: Form[Message])(implicit flash: Flash)
+
+@import helper._
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+    <div>@flash.get("info").getOrElse("")</div>
+
+    @helper.form(action = routes.Application.sendMessage) {
+        @inputText(messageForm("name"))
+        @inputText(messageForm("message"))
+        <input type="submit" value="Submit">
+    }
 
 }
