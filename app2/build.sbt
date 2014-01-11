@@ -13,7 +13,8 @@ libraryDependencies ++= Seq(
      ExclusionRule(organization = "javax.jms"),
      ExclusionRule(organization = "javax.mail"),
      ExclusionRule(organization = "org.slf4j")
-  )
+  ),
+  "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.2.2"
 )     
 
 play.Project.playScalaSettings

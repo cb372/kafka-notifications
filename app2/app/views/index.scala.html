@@ -1,7 +1,20 @@
-@(message: String)
+@(port: Int)
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message)
+    <h2>Messages</h2>
+    <p>New messages should appear below...</p>
+    <div id="messages"></div>
+
+    <script type="text/javascript">
+        var $div = $('#messages');
+        var ws = new WebSocket('ws://localhost:@port/ws')
+        ws.onmessage = function( message ) {
+            console.log( message );
+            var msg = JSON.parse(message.data);
+            var $p = $('<p>' + msg.name + ' says: ' + msg.message + '</p>');
+            $div.appendChild($p);
+        };
+    </script>
 
 }
