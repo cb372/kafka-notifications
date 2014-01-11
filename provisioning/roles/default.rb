@@ -10,4 +10,8 @@ default_attributes(
   }
 )
 
-run_list ["recipe[kafka-notifications::kafka]", "recipe[play2]"]
+run_list [
+  "recipe[kafka-notifications::kafka]", 
+  "recipe[play2]", 
+  "recipe[kafka-notifications::iptables]"
+]
