@@ -13,7 +13,7 @@
             console.log( message );
             var msg = JSON.parse(message.data);
             var $p = $('<p>' + msg.name + ' says: ' + msg.message + '</p>');
-            $div.appendChild($p);
+            $div.append($p);
         };
     </script>
 
