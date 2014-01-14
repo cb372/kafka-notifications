@@ -29,5 +29,8 @@ echo Starting Play app 2
 cd /vagrant/app2
 play "start -Dhttp.port=9002" >app2.log 2>&1 &
 
+echo "Giving the apps a few seconds to start up"
+sleep 10
+
 echo Done! Now go back to the host machine and open the play apps:
-echo "open localhost:9001 && open localhost:9002"
+echo "open http://localhost:9001 && open http://localhost:9002"
